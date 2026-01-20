@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
-require("dotenv").config();
 
 const app = express();
+
 app.use(cors());
 
 const TMDB_BASE = "https://api.themoviedb.org/3";
@@ -41,5 +41,5 @@ app.get("/books", async (req, res) => {
   }
 });
 
-// IMPORTANT FOR VERCEL:
 module.exports = app;
+
