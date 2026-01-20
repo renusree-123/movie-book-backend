@@ -40,7 +40,6 @@ app.get("/books", async (req, res) => {
     res.status(500).send(error.message);
   }
 });
-const PORT=process.env.PORT;
-app.listen(PORT, () =>
-  console.log("Backend running on http://localhost:5000")
-);
+
+// IMPORTANT FOR VERCEL:
+module.exports = app;
